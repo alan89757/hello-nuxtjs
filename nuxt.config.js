@@ -1,4 +1,8 @@
-export default {
+module.exports = {
+  target: 'static',
+  server: {
+    port: 8080
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-demo',
@@ -18,12 +22,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // 'ant-design-vue/dist/antd.css'
+    'ant-design-vue/dist/antd.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // '@/plugins/antd-ui'
+    '@/plugins/antd-ui'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -33,8 +37,14 @@ export default {
   buildModules: [
   ],
 
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: 'https://api.nuxtjs.dev'
+    }
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
