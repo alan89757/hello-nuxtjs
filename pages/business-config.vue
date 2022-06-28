@@ -31,7 +31,7 @@
   // import ConfigModal from '~/components/ConfigModal';
 
   const getEnv = function(){
-    return 'http://localhost:3000'
+    // return 'http://localhost:3000'
     const href = window.location.href;
     if(href.indexOf('-dev') > 0) {
       return 'https://api-dev.shinwell.cn';
